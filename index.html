@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ponto Alto | Cartão Digital</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: #000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .wrapper {
+      position: relative;
+      width: 100%;
+      max-width: 400px;
+    }
+    .wrapper img {
+      width: 100%;
+      display: block;
+    }
+    .link-area {
+      position: absolute;
+      display: block;
+      background-color: rgba(255, 255, 255, 0); /* transparente */
+      z-index: 10;
+      cursor: pointer;
+    }
+
+    /* Botões clicáveis */
+    #whatsapp {
+      top: 66.5%;
+      left: 13%;
+      width: 18%;
+      height: 13.5%;
+    }
+    #instagram {
+      top: 66.5%;
+      left: 33.5%;
+      width: 18%;
+      height: 13.5%;
+    }
+    #youtube {
+      top: 66.5%;
+      left: 54%;
+      width: 18%;
+      height: 13.5%;
+    }
+    #pix {
+      top: 66.5%;
+      left: 74%;
+      width: 18%;
+      height: 13.5%;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <img src="cartao-virtual.png" alt="Cartão Ponto Alto" />
+    <a id="whatsapp" class="link-area" href="https://wa.me/5586981444936" target="_blank"></a>
+    <a id="instagram" class="link-area" href="https://www.instagram.com/pontoaltoimagens/" target="_blank"></a>
+    <a id="youtube" class="link-area" href="https://www.youtube.com/@pontoaltoimagens/" target="_blank"></a>
+    <a id="pix" class="link-area" href="javascript:void(0);" onclick="copiarPix()"></a>
+  </div>
+
+  <script>
+    function copiarPix() {
+      const chavePix = 'monsueto.oliveira@gmail.com';
+      navigator.clipboard.writeText(chavePix).then(() => {
+        alert('Chave PIX copiada para a área de transferência!');
+      });
+    }
+  </script>
+</body>
+</html>
